@@ -1,0 +1,30 @@
+{
+  "name": "diagonally",
+  "owner": {
+    "name": "st01cs"
+  },
+  "metadata": {
+    "description": "Claude code skills",
+    "version": "0.0.1"
+  },
+  "plugins": [
+    {
+      "name": "python-dev",
+      "source": "./",
+      "description": "Python development skills",
+      "strict": false,
+      "skills": [
+        "./dev/python-development"
+      ]
+    },
+    {
+      "name": "meta-skills",
+      "source": "./",
+      "description": "Skills for skill",
+      "strict": false,
+      "skills": [
+        "./meta/skill-creator"
+      ]
+    }
+  ]
+}
