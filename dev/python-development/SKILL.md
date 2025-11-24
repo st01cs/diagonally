@@ -1,6 +1,6 @@
 ---
 name: python-development
-description: "Comprehensive Python development workflow support including project setup, package management, code quality, testing, debugging, documentation, and deployment. Use when Claude needs to work with Python projects for: (1) Setting up new Python projects with proper structure and virtual environments, (2) Managing dependencies and packages (pip, requirements.txt, poetry), (3) Implementing code quality tools and best practices (linting, formatting, type checking), (4) Creating and running tests (pytest, unittest), (5) Debugging Python code and troubleshooting common issues, (6) Setting up CI/CD pipelines and deployment configurations, (7) Performance optimization and security improvements"
+description: "Comprehensive Python development workflow support including project setup, package management, code quality, testing, debugging, documentation, and deployment. Use when Claude needs to work with Python projects for: (1) Setting up new Python projects with proper structure and virtual environments, (2) Managing dependencies and packages (uv), (3) Implementing code quality tools and best practices (linting, formatting, type checking), (4) Creating and running tests (pytest), (5) Debugging Python code and troubleshooting common issues, (6) Setting up CI/CD pipelines and deployment configurations, (7) Performance optimization and security improvements"
 ---
 
 # Python Development

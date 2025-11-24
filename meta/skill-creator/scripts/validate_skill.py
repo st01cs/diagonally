@@ -19,6 +19,12 @@ def validate_skill(skill_path):
     if not skill_md.exists():
         return False, "SKILL.md not found"
 
+    # Check if SKILL.md is under 500 lines and 5000 characters at most
+    if skill_md.read_text().count("\n") > 500:
+        return False, "SKILL.md is too long (over 500 lines)"
+    if len(skill_md.read_text()) > 5000:
+        return False, "SKILL.md is too long (over 5000 characters)"
+
     # Read and validate frontmatter
     content = skill_md.read_text()
     if not content.startswith("---"):
