@@ -22,8 +22,21 @@
       "source": "./",
       "description": "Skills for skill",
       "strict": false,
+      "commands": [
+        "./meta/skill-creator/commands/init-rules.md"
+      ],
       "skills": [
         "./meta/skill-creator"
+      ]
+    },
+    {
+      "name": "force-trigger",
+      "source": "./",
+      "description": "Skills for force triggering",
+      "strict": false,
+      "commands": [
+        "./meta/force-trigger/commands/init.md",
+        "./meta/force-trigger/commands/plugins.md"
       ]
     }
   ]
