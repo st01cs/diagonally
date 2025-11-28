@@ -15,5 +15,5 @@ fi
 Then, update skill-rules.json by collect all skill's skill-rules.json:
 
 ```bash
-scripts/update_skill_rules.py
+${CLAUDE_PLUGIN_ROOT}/scripts/update_skill_rules.py
 ```
