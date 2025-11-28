@@ -1,0 +1,44 @@
+{
+    "python-development": {
+        "type": "domain",
+        "enforcement": "suggest",
+        "priority": "high",
+        "promptTriggers": {
+            "keywords": ["python", "pip", "uv", "pytest", "ruff", "mypy", "python-dev", "virtual environment", "package management", "python project", "fastapi", "django", "flask", "sqlalchemy", "pydantic"],
+            "intentPatterns": [
+                "(create|set up|start|initialize).*(python project|python app)",
+                "(install|add|manage).*(python package|dependency|pip|uv)",
+                "(test|testing|pytest).*(python|code)",
+                "(lint|format|style|quality).*(python|code)",
+                "(debug|debugging|troubleshoot).*(python|code)",
+                "(document|documentation).*(python|code)",
+                "(deploy|deployment).*(python|app)",
+                "(optimize|performance).*(python|code)",
+                "(how to|best practices).*(python|development)"
+            ]
+        },
+        "fileTriggers": {
+            "pathPatterns": [
+                "**/*.py",
+                "**/requirements*.txt",
+                "**/pyproject.toml",
+                "**/setup.py",
+                "**/Pipfile",
+                "**/poetry.lock",
+                "**/pytest.ini",
+                "**/.python-version",
+                "**/conftest.py",
+                "**/Dockerfile"
+            ],
+            "contentPatterns": [
+                "import (python|fastapi|django|flask|sqlalchemy|pydantic|pytest|click)",
+                "from (fastapi|django|flask|sqlalchemy|pydantic|pytest|click)",
+                "#!/.*/python",
+                "venv/|\\.venv/",
+                "__pycache__/",
+                "if __name__ == [\"']__main__[\"']",
+                "@(pytest\\.fixture|app\\.route|dataclass|abstractmethod)"
+            ]
+        }
+    }
+}

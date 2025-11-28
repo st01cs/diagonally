@@ -14,7 +14,6 @@ RULES_TEMPLATE = """
             "keywords": ["", ""],
             "intentPatterns": [""]
     }
-  }
 }
 """
 
