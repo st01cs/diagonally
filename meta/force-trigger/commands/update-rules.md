@@ -1,6 +1,7 @@
 Check if .claude/skill-rules.json exists at project root and create it if it doesn't.
 
 First, check if the file exists:
+
 ```bash
 if [ ! -f ".claude/skill-rules.json" ]; then
     echo "File .claude/skill-rules.json does not exist. Creating it..."
@@ -9,4 +10,10 @@ if [ ! -f ".claude/skill-rules.json" ]; then
 else
     echo "File .claude/skill-rules.json already exists"
 fi
+```
+
+Then, update skill-rules.json by collect all skill's skill-rules.json:
+
+```bash
+scripts/update_skill_rules.py
 ```
