@@ -17,5 +17,5 @@ Then, update skill-rules.json by collect all skill's skill-rules.json:
 ```bash
 echo ${CLAUDE_PLUGIN_ROOT}
 echo ${CLAUDE_PROJECT_DIR}
-${CLAUDE_PLUGIN_ROOT}/scripts/update_skill_rules.py --plugin-root ${CLAUDE_PLUGIN_ROOT}
+${CLAUDE_PLUGIN_ROOT}/meta/force-trigger/scripts/update_skill_rules.py --plugin-root ${CLAUDE_PLUGIN_ROOT}
 ```
