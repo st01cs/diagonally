@@ -28,8 +28,7 @@
       "source": "./",
       "description": "Skills for force triggering",
       "strict": false,
-      "commands": ["./meta/force-trigger/commands/update-rules.md"],
-      "hooks": []
+      "commands": ["./meta/force-trigger/commands/update-rules.md"]
     }
   ]
 }
