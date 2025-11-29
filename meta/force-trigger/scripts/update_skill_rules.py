@@ -133,7 +133,7 @@ def main():
         "--output",
         type=str,
         default=None,
-        help="Output path for merged skill-rules.json (default: .claude/skill-rules.json relative to plugin root)",
+        help="Output path for merged skill-rules.json (default: .claude/skill-rules.json relative to current project root)",
     )
 
     args = parser.parse_args()
