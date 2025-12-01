@@ -130,6 +130,12 @@ def main():
         help="Path to CLAUDE_PLUGIN_ROOT directory (default: from environment variable or current directory)",
     )
     parser.add_argument(
+        "--project-root",
+        type=str,
+        default=None,
+        help="Optional second root to merge after plugin-root (defaults to plugin-root when not provided)",
+    )
+    parser.add_argument(
         "--output",
         type=str,
         default=None,
@@ -165,7 +171,22 @@ def main():
     print(f"Plugin root: {plugin_root}")
     print(f"Output path: {output_path}\n")
 
+    # First merge from plugin-root
     merge_skill_rules(plugin_root, output_path)
+
+    # Then, optionally, merge from project-root
+    if args.project_root:
+        project_root = Path(args.project_root).resolve()
+
+        if not project_root.exists():
+            print(
+                f"Error: Project root directory does not exist: {project_root}",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+
+        print(f"\nProject root: {project_root}")
+        merge_skill_rules(project_root, output_path)
 
 
 if __name__ == "__main__":
